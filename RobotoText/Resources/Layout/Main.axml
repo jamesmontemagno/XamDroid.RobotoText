@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:padding="8dip">
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Normal"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Italic"
+          android:textStyle="italic"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Bold"
+          android:textStyle="bold"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Sans Normal"
+         android:typeface="sans"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Sans Italic"
+          android:textStyle="italic"
+          android:typeface="sans"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Sans Bold"
+          android:textStyle="bold"
+          android:typeface="sans"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Serif Normal"
+        android:typeface="serif"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Serif Italic"
+          android:textStyle="italic"
+          android:typeface="serif"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Serif Bold"
+          android:textStyle="bold"
+          android:typeface="serif"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Monospace Normal"
+        android:typeface="monospace"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Monospace Italic"
+          android:textStyle="italic"
+          android:typeface="monospace"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Monospace Bold"
+          android:textStyle="bold"
+          android:typeface="monospace"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <com.refractored.controls.RobotoTextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          local:typeface="roboto_thin"
+          android:text="Roboto Thin"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_thin_italic"
+        android:text="Roboto Thin Italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_light"
+        android:text="Roboto Light"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_light_italic"
+        android:text="Roboto Light Italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_regular"
+        android:text="Roboto Regular"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_medium"
+        android:text="Roboto Medium"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_medium_italic"
+        android:text="Roboto Medium Italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_bold"
+        android:text="Roboto Bold"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_bold_italic"
+        android:text="Roboto Bold Italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_black"
+        android:text="Roboto Black"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_black_italic"
+        android:text="Roboto Black Italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:typeface="roboto_condensed"
+        android:text="Roboto Condensed"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       local:typeface="roboto_condensed_italic"
+       android:text="Roboto Condensed Italic"
+       android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       local:typeface="roboto_condensed_bold"
+       android:text="Roboto Condensed Bold"
+       android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.refractored.controls.RobotoTextView
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       local:typeface="roboto_condensed_bold_italic"
+       android:text="Roboto Condensed Bold Italic"
+       android:textAppearance="?android:attr/textAppearanceMedium" />
+  </LinearLayout>
+</ScrollView>
