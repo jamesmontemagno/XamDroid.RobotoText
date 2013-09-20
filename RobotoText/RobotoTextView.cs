@@ -124,48 +124,57 @@ namespace com.refractored.controls
                         break;
                     case ROBOTO_THIN_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-ThinItalic.ttf");
+                        m_Style = TypefaceStyle.Italic;
                         break;
                     case ROBOTO_LIGHT:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Light.ttf");
                         break;
                     case ROBOTO_LIGHT_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-LightItalic.ttf");
+                        m_Style = TypefaceStyle.Italic;
                         break;
                     case ROBOTO_REGULAR:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Regular.ttf");
                         break;
                     case ROBOTO_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Italic.ttf");
+                        m_Style = TypefaceStyle.Italic;
                         break;
                     case ROBOTO_MEDIUM:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Medium.ttf");
                         break;
                     case ROBOTO_MEDIUM_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-MediumItalic.ttf");
+                        m_Style = TypefaceStyle.Italic;
                         break;
                     case ROBOTO_BOLD:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Bold.ttf");
+                        m_Style = TypefaceStyle.Bold;
                         break;
                     case ROBOTO_BOLD_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldItalic.ttf");
+                        m_Style = TypefaceStyle.BoldItalic;
                         break;
                     case ROBOTO_BLACK:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Black.ttf");
                         break;
                     case ROBOTO_BLACK_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BlackItalic.ttf");
+                        m_Style = TypefaceStyle.Italic;
                         break;
                     case ROBOTO_CONDENSED:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Condensed.ttf");
                         break;
                     case ROBOTO_CONDENSED_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-CondensedItalic.ttf");
+                        m_Style = TypefaceStyle.Italic;
                         break;
                     case ROBOTO_CONDENSED_BOLD:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldCondensed.ttf");
                         break;
                     case ROBOTO_CONDENSED_BOLD_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldCondensedItalic.ttf");
+                        m_Style = TypefaceStyle.Italic;
                         break;
                     default:
                         throw new ArgumentException("Unknown typeface attribute value " + typefaceValue);
