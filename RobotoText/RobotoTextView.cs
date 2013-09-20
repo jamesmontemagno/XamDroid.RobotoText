@@ -171,10 +171,11 @@ namespace com.refractored.controls
                         break;
                     case ROBOTO_CONDENSED_BOLD:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldCondensed.ttf");
+                        m_Style = TypefaceStyle.Bold;
                         break;
                     case ROBOTO_CONDENSED_BOLD_ITALIC:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldCondensedItalic.ttf");
-                        m_Style = TypefaceStyle.Italic;
+                        m_Style = TypefaceStyle.BoldItalic;
                         break;
                     default:
                         throw new ArgumentException("Unknown typeface attribute value " + typefaceValue);
