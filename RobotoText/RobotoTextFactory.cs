@@ -34,29 +34,29 @@ namespace com.refractored.controls
     /// </summary>
     public class RobotoTextFactory : Java.Lang.Object, LayoutInflater.IFactory
     {
-        private const int ROBOTO_THIN = 0;
-        private const int ROBOTO_THIN_ITALIC = 1;
-        private const int ROBOTO_LIGHT = 2;
-        private const int ROBOTO_LIGHT_ITALIC = 3;
-        private const int ROBOTO_REGULAR = 4;
-        private const int ROBOTO_ITALIC = 5;
-        private const int ROBOTO_MEDIUM = 6;
-        private const int ROBOTO_MEDIUM_ITALIC = 7;
-        private const int ROBOTO_BOLD = 8;
-        private const int ROBOTO_BOLD_ITALIC = 9;
-        private const int ROBOTO_BLACK = 10;
-        private const int ROBOTO_BLACK_ITALIC = 11;
-        private const int ROBOTO_CONDENSED = 12;
-        private const int ROBOTO_CONDENSED_ITALIC = 13;
-        private const int ROBOTO_CONDENSED_BOLD = 14;
-        private const int ROBOTO_CONDENSED_BOLD_ITALIC = 15;
+        private const int RobotoThin = 0;
+        private const int RobotoThinItalic = 1;
+        private const int RobotoLight = 2;
+        private const int RobotoLightItalic = 3;
+        private const int RobotoRegular = 4;
+        private const int RobotoItalic = 5;
+        private const int RobotoMedium = 6;
+        private const int RobotoMediumItalic = 7;
+        private const int RobotoBold = 8;
+        private const int RobotoBoldItalic = 9;
+        private const int RobotoBlack = 10;
+        private const int RobotoBlackItalic = 11;
+        private const int RobotoCondensed = 12;
+        private const int RobotoCondensedItalic = 13;
+        private const int RobotoCondensedBold = 14;
+        private const int RobotoCondensedBoldItalic = 15;
 
         private TypefaceStyle m_Style = TypefaceStyle.Normal;
 
-        private static SparseArray<Typeface> m_Typefaces = new SparseArray<Typeface>(16);
-        private Dictionary<string, Type> m_TypeList = new Dictionary<string,Type>();
+        private static readonly SparseArray<Typeface> Typefaces = new SparseArray<Typeface>(16);
+        private readonly Dictionary<string, Type> m_TypeList = new Dictionary<string,Type>();
 
-        public View OnCreateView(string name, Context context, Android.Util.IAttributeSet attrs)
+        public View OnCreateView(string name, Context context, IAttributeSet attrs)
         {
             var attributeValue = attrs.GetAttributeIntValue("http://schemas.android.com/apk/res-auto", "typeface", -1);
 
@@ -81,7 +81,7 @@ namespace com.refractored.controls
             return null;
         }
 
-        private TextView CreateView(string name, Context context, Android.Util.IAttributeSet attrs)
+        private TextView CreateView(string name, Context context, IAttributeSet attrs)
         {
             if (!m_TypeList.ContainsKey(name))
             {
@@ -142,11 +142,11 @@ namespace com.refractored.controls
             try
             {
 
-                Typeface typeface = m_Typefaces.Get(typefaceValue);
+                Typeface typeface = Typefaces.Get(typefaceValue);
                 if (typeface == null)
                 {
                     typeface = this.CreateTypeface(context, typefaceValue);
-                    m_Typefaces.Put(typefaceValue, typeface);
+                    Typefaces.Put(typefaceValue, typeface);
                 }
                 return typeface;
             }
@@ -165,61 +165,61 @@ namespace com.refractored.controls
                 Typeface typeface;
                 switch (typefaceValue)
                 {
-                    case ROBOTO_THIN:
+                    case RobotoThin:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Thin.ttf");
                         break;
-                    case ROBOTO_THIN_ITALIC:
+                    case RobotoThinItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-ThinItalic.ttf");
                         m_Style = TypefaceStyle.Italic;
                         break;
-                    case ROBOTO_LIGHT:
+                    case RobotoLight:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Light.ttf");
                         break;
-                    case ROBOTO_LIGHT_ITALIC:
+                    case RobotoLightItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-LightItalic.ttf");
                         m_Style = TypefaceStyle.Italic;
                         break;
-                    case ROBOTO_REGULAR:
+                    case RobotoRegular:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Regular.ttf");
                         break;
-                    case ROBOTO_ITALIC:
+                    case RobotoItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Italic.ttf");
                         m_Style = TypefaceStyle.Italic;
                         break;
-                    case ROBOTO_MEDIUM:
+                    case RobotoMedium:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Medium.ttf");
                         break;
-                    case ROBOTO_MEDIUM_ITALIC:
+                    case RobotoMediumItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-MediumItalic.ttf");
                         m_Style = TypefaceStyle.Italic;
                         break;
-                    case ROBOTO_BOLD:
+                    case RobotoBold:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Bold.ttf");
                         m_Style = TypefaceStyle.Bold;
                         break;
-                    case ROBOTO_BOLD_ITALIC:
+                    case RobotoBoldItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldItalic.ttf");
                         m_Style = TypefaceStyle.BoldItalic;
                         break;
-                    case ROBOTO_BLACK:
+                    case RobotoBlack:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Black.ttf");
                         break;
-                    case ROBOTO_BLACK_ITALIC:
+                    case RobotoBlackItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BlackItalic.ttf");
                         m_Style = TypefaceStyle.Italic;
                         break;
-                    case ROBOTO_CONDENSED:
+                    case RobotoCondensed:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-Condensed.ttf");
                         break;
-                    case ROBOTO_CONDENSED_ITALIC:
+                    case RobotoCondensedItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-CondensedItalic.ttf");
                         m_Style = TypefaceStyle.Italic;
                         break;
-                    case ROBOTO_CONDENSED_BOLD:
+                    case RobotoCondensedBold:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldCondensed.ttf");
                         m_Style = TypefaceStyle.Bold;
                         break;
-                    case ROBOTO_CONDENSED_BOLD_ITALIC:
+                    case RobotoCondensedBoldItalic:
                         typeface = Typeface.CreateFromAsset(context.Assets, "fonts/Roboto-BoldCondensedItalic.ttf");
                         m_Style = TypefaceStyle.BoldItalic;
                         break;
