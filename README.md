@@ -65,7 +65,7 @@ You can apply this same concept to any other control such as a CheckedTextView.
 ### Expand with custom LayoutInflator Factory
 Also included is `RobotoTextFactory`. If you want you will still need the `typeface` enum attribute but this will allow you to add the typeface to any View that derives from TextView such as Button, CheckBox, etc. All you will need to do is set the RobotoTextFactory before SetContentView is called:
 
-`
+```
 protected override void OnCreate(Bundle bundle)
 {
     base.OnCreate(bundle);
@@ -73,17 +73,17 @@ protected override void OnCreate(Bundle bundle)
     // Set our view from the "main" layout resource
     this.SetContentView(Resource.Layout.Main);
 }
-`
+```
 
 In your axml file all you need to do is add the custom attribute onto any of your Views:
 
-`
+```
 <CheckBox
      android:layout_width="fill_parent"
      android:layout_height="wrap_content"
      android:text="CheckBox with Roboto Thin"
      local:typeface="roboto_thin" />
-`
+```
 
 This will result in something like this:
 ![Factory](https://raw.github.com/jamesmontemagno/XamDroid.RobotoText/master/Screenshots/Factory.JPG)
