@@ -57,6 +57,7 @@
     <Compile Include="Activity1.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RobotoTextFactory.cs" />
     <Compile Include="RobotoTextView.cs" />
   </ItemGroup>
   <ItemGroup>

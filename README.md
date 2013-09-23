@@ -5,10 +5,15 @@ XamDroid.RobotoText
 
 Implementation backwards compatibility Roboto font in any control!.
 
+Read the blog posts:
+[RobotTextView](http://motzcod.es/post/61775933477/beautiful-android-compat-roboto-fonts-in)
+[RobotoTextFactory](http://motzcod.es/post//super-roboto-fonts-custom-layoutinflater-ifactory-in)
+
 
 ## Demo
 
 ![Sample](https://raw.github.com/jamesmontemagno/XamDroid.RobotoText/master/Screenshots/Sample.png)
+![Factory](https://raw.github.com/jamesmontemagno/XamDroid.RobotoText/master/Screenshots/Factory.JPG)
 
 ## Getting started
 
@@ -56,6 +61,33 @@ Valid options are:
 
 ### Expanding
 You can apply this same concept to any other control such as a CheckedTextView.
+
+### Expand with custom LayoutInflator Factory
+Also included is `RobotoTextFactory`. If you want you will still need the `typeface` enum attribute but this will allow you to add the typeface to any View that derives from TextView such as Button, CheckBox, etc. All you will need to do is set the RobotoTextFactory before SetContentView is called:
+
+`
+protected override void OnCreate(Bundle bundle)
+{
+    base.OnCreate(bundle);
+    LayoutInflater.Factory = new RobotoTextFactory();
+    // Set our view from the "main" layout resource
+    this.SetContentView(Resource.Layout.Main);
+}
+`
+
+In your axml file all you need to do is add the custom attribute onto any of your Views:
+
+`
+<CheckBox
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:text="CheckBox with Roboto Thin"
+     local:typeface="roboto_thin" />
+`
+
+This will result in something like this:
+![Factory](https://raw.github.com/jamesmontemagno/XamDroid.RobotoText/master/Screenshots/Factory.JPG)
+
 
 ## Development:
 

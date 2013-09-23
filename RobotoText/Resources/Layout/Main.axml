@@ -202,5 +202,49 @@
        local:typeface="roboto_condensed_bold_italic"
        android:text="Roboto Condensed Bold Italic"
        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Roboto Thin using Factory"
+      local:typeface="roboto_thin"
+       android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Button
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:text="Button with Roboto Thin"
+     local:typeface="roboto_thin" />
+
+    <CheckedTextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="CheckedTextView with Roboto Thin"
+    local:typeface="roboto_thin" />
+
+    <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="EditText with Roboto Thin"
+      local:typeface="roboto_thin" />
+
+    <RadioButton
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="RadioButton with Roboto Thin"
+      local:typeface="roboto_thin" />
+
+    <Switch
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Switch with Roboto Thin"
+      local:typeface="roboto_thin" />
+
+    <CheckBox
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:text="CheckBox with Roboto Thin"
+     local:typeface="roboto_thin" />
+    
   </LinearLayout>
 </ScrollView>

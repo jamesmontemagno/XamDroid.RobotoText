@@ -27,7 +27,7 @@ namespace com.refractored.controls
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+            LayoutInflater.Factory = new RobotoTextFactory();
             // Set our view from the "main" layout resource
             this.SetContentView(Resource.Layout.Main);
         }
