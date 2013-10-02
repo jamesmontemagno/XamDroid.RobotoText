@@ -15,6 +15,7 @@
 */
 
 using System;
+using System.Collections.Generic;
 
 using Android.Content;
 using Android.Content.Res;
@@ -46,7 +47,7 @@ namespace com.refractored.controls
 
         private TypefaceStyle m_Style = TypefaceStyle.Normal;
 
-        private static readonly SparseArray<Typeface> Typefaces = new SparseArray<Typeface>(16);
+        private static readonly Dictionary<int, Typeface> Typefaces = new Dictionary<int, Typeface>(16);
 
         public RobotoTextView(Context context) :
             base(context)
@@ -96,11 +97,14 @@ namespace com.refractored.controls
             try
             {
 
-                Typeface typeface = Typefaces.Get(typefaceValue);
+                Typeface typeface = null;
+                if (Typefaces.ContainsKey(typefaceValue))
+                    typeface = Typefaces[typefaceValue];
+
                 if (typeface == null)
                 {
                     typeface = this.CreateTypeface(context, typefaceValue);
-                    Typefaces.Put(typefaceValue, typeface);
+                    Typefaces.Add(typefaceValue, typeface);
                 }
                 return typeface;
             }
